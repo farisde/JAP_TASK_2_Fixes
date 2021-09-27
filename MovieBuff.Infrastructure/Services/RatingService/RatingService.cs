@@ -26,13 +26,28 @@ namespace MovieBuff.Services.RatingService
         /// </summary>
         /// <param name="newRating"></param>
         /// <returns></returns>
-        public async Task<ServiceResponse<GetRatingDto>> AddMovieRating(AddRatingDto newRating)
+        public async Task<ServiceResponse<GetRatingDto>> AddMediaRating(AddRatingDto newRating)
         {
             var response = new ServiceResponse<GetRatingDto>();
+
+            if (newRating.Value < 1 || newRating.Value > 5)
+            {
+                response.Success = false;
+                response.Message = "Invalid rating range. Must be between 1 and 5.";
+                return response;
+            }
+
             var ratedMedia = await _context.Medias
                 .Include(m => m.Cast)
                 .Include(m => m.RatingList)
                 .FirstOrDefaultAsync(m => m.Id == newRating.RatedMediaId);
+
+            if (ratedMedia == null)
+            {
+                response.Success = false;
+                response.Message = "Selected media ID doesn't exist.";
+                return response;
+            }
 
             var rating = new Rating
             {
