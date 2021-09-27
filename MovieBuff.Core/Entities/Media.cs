@@ -1,7 +1,8 @@
+using MovieBuff.Models;
 using System;
 using System.Collections.Generic;
 
-namespace MovieBuff.Models
+namespace MovieBuff.Entities
 {
     public class Media
     {

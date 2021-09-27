@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MovieBuff.Data;
 using MovieBuff.DTOs.Movie;
+using MovieBuff.Entities;
 using MovieBuff.Models;
 using System.Linq;
 using System.Threading.Tasks;

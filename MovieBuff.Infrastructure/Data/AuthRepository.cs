@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using MovieBuff.Entities;
 using MovieBuff.Models;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -94,7 +95,7 @@ namespace MovieBuff.Data
         /// <param name="password"></param>
         /// <param name="passwordHash"></param>
         /// <param name="passwordSalt"></param>
-        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {

@@ -1,6 +1,8 @@
 using AutoMapper;
 using MovieBuff.DTOs.Movie;
-using MovieBuff.Models;
+using MovieBuff.DTOs.Screening;
+using MovieBuff.DTOs.Ticket;
+using MovieBuff.Entities;
 
 namespace MovieBuff
 {
@@ -12,6 +14,8 @@ namespace MovieBuff
             CreateMap<CastMember, GetCastMemberDto>();
             CreateMap<Rating, GetRatingDto>();
             CreateMap<AddRatingDto, Rating>();
+            CreateMap<Screening, GetScreeningDto>();
+            CreateMap<Ticket, GetTicketDto>();
         }
     }
 }

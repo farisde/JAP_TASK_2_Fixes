@@ -1,4 +1,4 @@
-namespace MovieBuff.Models
+namespace MovieBuff.Entities
 {
     public class Rating
     {

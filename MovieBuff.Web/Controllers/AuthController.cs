@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieBuff.Data;
 using MovieBuff.DTOs.User;
+using MovieBuff.Entities;
 using MovieBuff.Models;
 using System.Threading.Tasks;
 

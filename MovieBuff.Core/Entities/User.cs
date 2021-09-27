@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MovieBuff.Models
+namespace MovieBuff.Entities
 {
     public class User
     {

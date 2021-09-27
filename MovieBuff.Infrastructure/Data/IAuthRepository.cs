@@ -1,3 +1,4 @@
+using MovieBuff.Entities;
 using MovieBuff.Models;
 using System.Threading.Tasks;
 

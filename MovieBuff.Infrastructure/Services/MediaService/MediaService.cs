@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieBuff.Core.Services.MediaService;
 using MovieBuff.Data;
 using MovieBuff.DTOs.Movie;
+using MovieBuff.Entities;
 using MovieBuff.Models;
 using MovieBuff.Queries;
 using System;
