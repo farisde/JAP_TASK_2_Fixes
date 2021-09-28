@@ -20,7 +20,7 @@ namespace MovieBuff.Web.Controllers
             _ticketService = ticketService;
         }
 
-        [HttpPost("BuyTickets")]
+        [HttpPost("buy")]
         public async Task<ActionResult<ServiceResponse<GetScreeningDto>>> BuyTicketsForScreening(BuyTicketDto buyTicket)
         {
             var response = await _ticketService.BuyTicketsForScreening(buyTicket);
